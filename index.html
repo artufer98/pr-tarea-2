@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recetas de Ensalada Caprese</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-light-grey" style="display:none; width:250px;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+  <a href="#" class="w3-bar-item w3-button" onclick="showRecipe(1)">Ensalada Caprese Tradicional</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showRecipe(2)">Ensalada Caprese con Espárragos</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showRecipe(3)">Ensalada Caprese con Aguacate</a>
+</div>
+
+<div id="main">
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h1>Recetas de Ensalada Caprese</h1>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding">
+    <div id="recipe1" style="display:none;">
+      <h2 class="w3-text-teal">Ensalada Caprese Tradicional</h2>
+      <a href="https://es.wikipedia.org/wiki/Ensalada_caprese#:~:text=La%20ensalada%20Caprese%2C%20o%20simplemente,regado%20con%20aceite%20de%20oliva.">WIKI</a>
+      <br />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Caprese-1.jpg/1280px-Caprese-1.jpg" alt="Ensalada Caprese Tradicional" class="w3-image">
+      <p>
+        Ingredientes:<br>
+        - Tomates frescos<br>
+        - Queso mozzarella fresco<br>
+        - Hojas de albahaca fresca<br>
+        - Aceite de oliva extra virgen<br>
+        - Sal y pimienta al gusto<br>
+        - Vinagre balsámico (opcional)
+      </p>
+      <p>
+        Instrucciones:<br>
+        1. Corta los tomates y el queso en rodajas.<br>
+        2. Alterna las rodajas de tomate y mozzarella en un plato.<br>
+        3. Coloca hojas de albahaca entre las capas.<br>
+        4. Rocía con aceite de oliva, sal y pimienta.<br>
+        5. Agrega vinagre balsámico si lo deseas.
+      </p>
+    </div>
+
+    <div id="recipe2" style="display:none;">
+      <h2 class="w3-text-teal">Ensalada Caprese con Espárragos</h2>
+      <a href="https://es.wikipedia.org/wiki/Ensalada_caprese#:~:text=La%20ensalada%20Caprese%2C%20o%20simplemente,regado%20con%20aceite%20de%20oliva.">WIKI</a>
+      <br />
+      <img src="https://content-cocina.lecturas.com/medio/2019/03/12/caprese-con-burrata-y-esparragos_f24f29f3_800x800.jpg" alt="Ensalada Caprese con Espárragos" class="w3-image">
+      <p>
+        Ingredientes:<br>
+        - Tomates cherry<br>
+        - Queso mozzarella fresco<br>
+        - Espárragos cocidos<br>
+        - Hojas de albahaca fresca<br>
+        - Aceite de oliva extra virgen<br>
+        - Sal y pimienta al gusto
+      </p>
+      <p>
+        Instrucciones:<br>
+        1. Corta los tomates cherry a la mitad.<br>
+        2. Corta los espárragos en trozos pequeños.<br>
+        3. Alterna tomates, mozzarella y espárragos en un plato.<br>
+        4. Coloca hojas de albahaca.<br>
+        5. Rocía con aceite de oliva, sal y pimienta.
+      </p>
+    </div>
+
+    <div id="recipe3" style="display:none;">
+      <h2 class="w3-text-teal">Ensalada Caprese con Aguacate</h2>
+      <a href="https://es.wikipedia.org/wiki/Ensalada_caprese#:~:text=La%20ensalada%20Caprese%2C%20o%20simplemente,regado%20con%20aceite%20de%20oliva.">WIKI</a>
+      <br />
+      <img src="https://www.gourmet4life.com/image0428/18/183c2ab1edd97156f8eaafe8f7954693.jpg" alt="Ensalada Caprese Tradicional" class="w3-image">
+      <p>
+        Ingredientes:<br>
+        - Tomates frescos<br>
+        - Queso mozzarella fresco<br>
+        - Aguacate maduro<br>
+        - Hojas de albahaca fresca<br>
+        - Aceite de oliva extra virgen<br>
+        - Sal y pimienta al gusto
+      </p>
+      <p>
+        Instrucciones:<br>
+        1. Corta los tomates y el aguacate en rodajas.<br>
+        2. Corta el queso mozzarella en rodajas.<br>
+        3. Alterna las rodajas de tomate, mozzarella y aguacate en un plato.<br>
+        4. Coloca hojas de albahaca.<br>
+        5. Rocía con aceite de oliva, sal y pimienta.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  function showRecipe(recipeNumber) {
+    var recipes = document.querySelectorAll("#recipe1, #recipe2, #recipe3");
+    recipes.forEach(function(recipe) {
+      recipe.style.display = "none";
+    });
+    document.getElementById("recipe" + recipeNumber).style.display = "block";
+  }
+</script>
+
+</body>
+</html>
